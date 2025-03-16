@@ -27,22 +27,22 @@ export const AboutSection: React.FC = () => {
     {
       name: "Thumri",
       description: "Graceful expressions and delicate emotions",
-      image: "https://images.unsplash.com/photo-1608639013993-824afb267d0f?q=80&w=774&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1611709933313-78f37c583091?q=80&w=774&auto=format&fit=crop"
     },
     {
       name: "Tarana",
       description: "Pure rhythmic dance with intricate footwork",
-      image: "https://images.unsplash.com/photo-1533072561510-5044f4016b1d?q=80&w=1170&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1547153760-18fc86324498?q=80&w=774&auto=format&fit=crop"
     },
     {
       name: "Abhinaya",
       description: "Storytelling through facial expressions and gestures",
-      image: "https://images.unsplash.com/photo-1617339860293-decbf705b3fb?q=80&w=774&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1578985824626-945a6f546304?q=80&w=774&auto=format&fit=crop"
     }
   ];
 
   return (
-    <section id="about" className="py-24 bg-gradient-to-b from-secondary to-secondary/50">
+    <section id="about" className="py-24 bg-gradient-to-b from-accent to-accent/30">
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
@@ -52,11 +52,11 @@ export const AboutSection: React.FC = () => {
           className="max-w-6xl mx-auto"
         >
           <motion.div variants={item} className="text-center mb-16">
-            <h2 className="text-sm font-medium tracking-wider uppercase mb-3 text-khatak-gold">
+            <h2 className="text-sm font-medium tracking-wider uppercase mb-3 text-primary">
               Our Academy
             </h2>
-            <h3 className="text-3xl md:text-4xl font-serif font-bold">
-              Preserving the Legacy of <span className="text-khatak-gold">Kathak</span>
+            <h3 className="text-3xl md:text-4xl font-serif font-bold decorative-heading">
+              Preserving the Legacy of <span className="text-primary">Kathak</span>
             </h3>
           </motion.div>
 
@@ -82,7 +82,7 @@ export const AboutSection: React.FC = () => {
             >
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1535359056830-d4badde79747?q=80&w=1374&auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1617339697499-9e5f287f0792?q=80&w=1374&auto=format&fit=crop" 
                   alt="Kathak dancers performing" 
                   className="w-full h-[500px] object-cover object-center"
                 />
@@ -104,8 +104,8 @@ export const AboutSection: React.FC = () => {
           </div>
           
           <motion.div variants={item} className="mt-16 mb-12">
-            <h3 className="text-2xl md:text-3xl font-serif font-medium text-center mb-8">
-              Explore <span className="text-khatak-gold">Kathak</span> Dance Styles
+            <h3 className="text-2xl md:text-3xl font-serif font-medium text-center mb-8 decorative-border py-4">
+              Explore <span className="text-primary">Kathak</span> Dance Styles
             </h3>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -113,7 +113,7 @@ export const AboutSection: React.FC = () => {
                 <motion.div 
                   key={index}
                   whileHover={{ y: -10 }}
-                  className="bg-white/5 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg border border-khatak-gold/10 hover:border-khatak-gold/30 transition-all duration-300"
+                  className="bg-white/80 rounded-lg overflow-hidden shadow-lg border border-primary/10 hover:border-primary/30 transition-all duration-300"
                 >
                   <div className="h-56 overflow-hidden">
                     <img 
@@ -123,7 +123,7 @@ export const AboutSection: React.FC = () => {
                     />
                   </div>
                   <div className="p-6">
-                    <h4 className="text-xl font-serif font-medium mb-2 text-khatak-gold">{style.name}</h4>
+                    <h4 className="text-xl font-serif font-medium mb-2 text-primary">{style.name}</h4>
                     <p className="text-muted-foreground">{style.description}</p>
                   </div>
                 </motion.div>
@@ -146,8 +146,8 @@ export const AboutSection: React.FC = () => {
                 description: "Students regularly participate in cultural events, festivals, and annual showcases to gain valuable stage experience."
               }
             ].map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 shadow-sm hover-lift border border-white/5">
-                <h4 className="text-xl font-serif font-medium mb-4 text-khatak-gold">{feature.title}</h4>
+              <div key={index} className="bg-white/80 rounded-lg p-6 shadow-sm hover-lift border border-primary/10 hover:border-primary/30">
+                <h4 className="text-xl font-serif font-medium mb-4 text-primary">{feature.title}</h4>
                 <p className="text-muted-foreground">{feature.description}</p>
               </div>
             ))}

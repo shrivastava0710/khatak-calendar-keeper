@@ -7,7 +7,7 @@
 
 @layer base {
   :root {
-    --background: 44 40% 98%;
+    --background: 35 30% 97%;
     --foreground: 38 40% 16%;
 
     --card: 0 0% 100%;
@@ -16,56 +16,56 @@
     --popover: 0 0% 100%;
     --popover-foreground: 38 40% 16%;
 
-    --primary: 40 55% 42%;
-    --primary-foreground: 40 30% 96%;
+    --primary: 12 76% 51%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 36 30% 96%;
-    --secondary-foreground: 40 55% 42%;
+    --secondary-foreground: 12 76% 51%;
 
     --muted: 40 10% 90%;
     --muted-foreground: 40 15% 40%;
 
-    --accent: 40 35% 85%;
-    --accent-foreground: 40 55% 42%;
+    --accent: 18 65% 95%;
+    --accent-foreground: 12 76% 51%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 40 15% 85%;
     --input: 40 15% 85%;
-    --ring: 40 55% 42%;
+    --ring: 12 76% 51%;
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 40 30% 10%;
+    --background: 20 30% 10%;
     --foreground: 36 30% 96%;
 
-    --card: 40 30% 12%;
+    --card: 20 30% 12%;
     --card-foreground: 36 30% 96%;
 
-    --popover: 40 30% 12%;
+    --popover: 20 30% 12%;
     --popover-foreground: 36 30% 96%;
 
-    --primary: 40 55% 42%;
-    --primary-foreground: 40 30% 96%;
+    --primary: 12 76% 51%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 40 30% 20%;
+    --secondary: 20 30% 20%;
     --secondary-foreground: 36 30% 96%;
 
-    --muted: 40 30% 20%;
+    --muted: 20 30% 20%;
     --muted-foreground: 40 15% 70%;
 
-    --accent: 40 30% 20%;
+    --accent: 20 30% 20%;
     --accent-foreground: 36 30% 96%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 40 30% 25%;
-    --input: 40 30% 25%;
-    --ring: 40 55% 50%;
+    --border: 20 30% 25%;
+    --input: 20 30% 25%;
+    --ring: 12 76% 51%;
   }
 }
 
@@ -124,14 +124,47 @@
 }
 
 .calendar-day.has-class {
-  @apply bg-khatak-cream;
+  @apply bg-accent;
 }
 
 .calendar-day:hover {
-  @apply bg-khatak-cream bg-opacity-50;
+  @apply bg-accent bg-opacity-50;
 }
 
 .calendar-day.has-class::after {
   content: '';
-  @apply absolute bottom-1 left-0 right-0 mx-auto w-1.5 h-1.5 bg-khatak-gold rounded-full;
+  @apply absolute bottom-1 left-0 right-0 mx-auto w-1.5 h-1.5 bg-primary rounded-full;
+}
+
+/* Decorative elements inspired by Natya Sutra */
+.decorative-border {
+  @apply relative;
+}
+
+.decorative-border::before {
+  content: '';
+  @apply absolute top-0 left-1/2 -translate-x-1/2 w-16 h-px bg-primary;
+}
+
+.decorative-border::after {
+  content: '';
+  @apply absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-px bg-primary;
+}
+
+.decorative-heading {
+  @apply relative inline-block;
+}
+
+.decorative-heading::before,
+.decorative-heading::after {
+  content: '';
+  @apply absolute top-1/2 -translate-y-1/2 w-6 h-px bg-primary;
+}
+
+.decorative-heading::before {
+  @apply -left-8;
+}
+
+.decorative-heading::after {
+  @apply -right-8;
 }

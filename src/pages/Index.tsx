@@ -48,7 +48,7 @@ const Index: React.FC = () => {
       <AboutSection />
       
       {/* Instructors Section */}
-      <section id="instructors" className="py-24 bg-gradient-to-b from-background to-secondary/30">
+      <section id="instructors" className="py-24 bg-gradient-to-b from-background to-accent/30">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -57,10 +57,10 @@ const Index: React.FC = () => {
             transition={{ duration: 0.5 }}
             className="text-center mb-16"
           >
-            <h2 className="text-sm font-medium tracking-wider uppercase mb-3 text-khatak-gold">
+            <h2 className="text-sm font-medium tracking-wider uppercase mb-3 text-primary">
               Our Faculty
             </h2>
-            <h3 className="text-3xl md:text-4xl font-serif font-bold">
+            <h3 className="text-3xl md:text-4xl font-serif font-bold decorative-heading">
               Meet Our Expert Instructors
             </h3>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -84,8 +84,8 @@ const Index: React.FC = () => {
         </div>
       </section>
       
-      {/* Gallery Section - New Addition */}
-      <section className="py-24 bg-khatak-charcoal">
+      {/* Gallery Section */}
+      <section className="py-24 bg-gradient-to-r from-primary/10 to-primary/5">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -94,13 +94,13 @@ const Index: React.FC = () => {
             transition={{ duration: 0.5 }}
             className="text-center mb-16"
           >
-            <h2 className="text-sm font-medium tracking-wider uppercase mb-3 text-khatak-gold">
+            <h2 className="text-sm font-medium tracking-wider uppercase mb-3 text-primary">
               Our Performances
             </h2>
-            <h3 className="text-3xl md:text-4xl font-serif font-bold text-white">
+            <h3 className="text-3xl md:text-4xl font-serif font-bold decorative-heading">
               Kathak in Motion
             </h3>
-            <p className="mt-4 text-lg text-white/70 max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
               Glimpses of our performances showcasing the grace, precision and beauty of Kathak dance.
             </p>
           </motion.div>
@@ -129,7 +129,8 @@ const Index: React.FC = () => {
                 whileHover={{ scale: 1.05, zIndex: 10 }}
                 className={cn(
                   "overflow-hidden rounded-lg shadow-xl",
-                  index % 3 === 0 ? "md:col-span-2 md:row-span-2" : ""
+                  index % 3 === 0 ? "md:col-span-2 md:row-span-2" : "",
+                  "border-2 border-white"
                 )}
               >
                 <img 
@@ -144,7 +145,7 @@ const Index: React.FC = () => {
       </section>
       
       {/* Calendar Preview Section */}
-      <section className="py-24 bg-gradient-to-b from-secondary/80 to-background">
+      <section className="py-24 bg-gradient-to-b from-accent/80 to-background">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -153,10 +154,10 @@ const Index: React.FC = () => {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-sm font-medium tracking-wider uppercase mb-3 text-khatak-gold">
+              <h2 className="text-sm font-medium tracking-wider uppercase mb-3 text-primary">
                 Upcoming Classes
               </h2>
-              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6">
+              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6 decorative-heading">
                 Join Our Classes
               </h3>
               <p className="text-lg mb-8 leading-relaxed text-muted-foreground">
@@ -168,7 +169,7 @@ const Index: React.FC = () => {
                 to="/calendar"
                 className={cn(
                   "group inline-flex items-center px-6 py-3 rounded-md text-base font-semibold transition-all",
-                  "bg-khatak-gold text-black hover:bg-khatak-gold/90",
+                  "bg-primary text-white hover:bg-primary/90",
                   "hover-lift"
                 )}
               >
@@ -182,7 +183,7 @@ const Index: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5 }}
-              className="bg-white/5 backdrop-blur-sm p-4 rounded-lg border border-white/10 shadow-xl"
+              className="bg-white/90 p-4 rounded-lg border border-primary/10 shadow-xl"
             >
               <Calendar schedules={schedules} compact={true} />
             </motion.div>
@@ -200,10 +201,10 @@ const Index: React.FC = () => {
             transition={{ duration: 0.5 }}
             className="text-center mb-16"
           >
-            <h2 className="text-sm font-medium tracking-wider uppercase mb-3 text-khatak-gold">
+            <h2 className="text-sm font-medium tracking-wider uppercase mb-3 text-primary">
               Get In Touch
             </h2>
-            <h3 className="text-3xl md:text-4xl font-serif font-bold">
+            <h3 className="text-3xl md:text-4xl font-serif font-bold decorative-heading">
               Contact Us
             </h3>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -253,7 +254,7 @@ const Index: React.FC = () => {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
-                <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="bg-white p-6 rounded-lg shadow-md border border-primary/10">
                   <h4 className="text-xl font-serif font-medium mb-6">Send Us a Message</h4>
                   <form className="space-y-4">
                     <div>
@@ -261,7 +262,7 @@ const Index: React.FC = () => {
                       <input
                         type="text"
                         id="name"
-                        className="w-full px-4 py-2 rounded-md border border-border focus:outline-none focus:ring-2 focus:ring-khatak-gold/50"
+                        className="w-full px-4 py-2 rounded-md border border-border focus:outline-none focus:ring-2 focus:ring-primary/50"
                         placeholder="Your name"
                       />
                     </div>
@@ -270,7 +271,7 @@ const Index: React.FC = () => {
                       <input
                         type="email"
                         id="email"
-                        className="w-full px-4 py-2 rounded-md border border-border focus:outline-none focus:ring-2 focus:ring-khatak-gold/50"
+                        className="w-full px-4 py-2 rounded-md border border-border focus:outline-none focus:ring-2 focus:ring-primary/50"
                         placeholder="Your email"
                       />
                     </div>
@@ -279,7 +280,7 @@ const Index: React.FC = () => {
                       <textarea
                         id="message"
                         rows={4}
-                        className="w-full px-4 py-2 rounded-md border border-border focus:outline-none focus:ring-2 focus:ring-khatak-gold/50"
+                        className="w-full px-4 py-2 rounded-md border border-border focus:outline-none focus:ring-2 focus:ring-primary/50"
                         placeholder="Your message"
                       />
                     </div>
@@ -288,7 +289,7 @@ const Index: React.FC = () => {
                         type="submit"
                         className={cn(
                           "w-full px-6 py-3 rounded-md text-base font-semibold transition-all",
-                          "bg-khatak-gold text-black hover:bg-khatak-gold/90",
+                          "bg-primary text-white hover:bg-primary/90",
                           "hover-lift"
                         )}
                       >

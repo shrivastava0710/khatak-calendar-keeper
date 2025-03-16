@@ -38,11 +38,14 @@ export const Hero: React.FC = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed z-0"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1608031236233-a4583bd3b02e?q=80&w=1974&auto=format&fit=crop')",
+          backgroundImage: "url('https://images.unsplash.com/photo-1593696954577-d3e01a7ae2f9?q=80&w=2070&auto=format&fit=crop')",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent" />
       </div>
+      
+      {/* Decorative Border Inspired by Natya Sutra */}
+      <div className="absolute top-10 left-10 right-10 bottom-10 border border-primary/30 z-[1] pointer-events-none" />
       
       {/* Hero Content */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-white px-4">
@@ -53,8 +56,8 @@ export const Hero: React.FC = () => {
           className="text-center max-w-4xl"
         >
           <motion.div variants={item}>
-            <h2 className="text-sm md:text-base font-medium tracking-wider uppercase mb-3 text-khatak-gold">
-              <span className="inline-block px-3 py-1 bg-khatak-charcoal/60 backdrop-blur-sm rounded-full border border-khatak-gold/30">
+            <h2 className="text-sm md:text-base font-medium tracking-wider uppercase mb-3 text-primary">
+              <span className="inline-block px-3 py-1 bg-black/40 backdrop-blur-sm rounded-full border border-primary/30">
                 Tradition • Expression • Rhythm
               </span>
             </h2>
@@ -65,7 +68,7 @@ export const Hero: React.FC = () => {
             className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 text-shadow"
           >
             Experience the Art of <br className="hidden md:block" />
-            <span className="text-khatak-gold">Kathak Dance</span>
+            <span className="text-primary">Kathak Dance</span>
           </motion.h1>
           
           <motion.p 
@@ -81,7 +84,7 @@ export const Hero: React.FC = () => {
               href="/calendar" 
               className={cn(
                 "px-8 py-3 rounded-md text-base font-semibold transition-all",
-                "bg-khatak-gold text-black hover:bg-khatak-gold/90",
+                "bg-primary text-white hover:bg-primary/90",
                 "hover-lift"
               )}
             >
