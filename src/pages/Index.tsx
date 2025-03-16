@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Layout from '@/components/Layout';
 import Hero from '@/components/Hero';
@@ -106,14 +107,14 @@ const Index: React.FC = () => {
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {[
-              "https://images.unsplash.com/photo-1504326787394-e6d75cae8027?q=80&w=1470&auto=format&fit=crop",
-              "https://images.unsplash.com/photo-1504894577061-4ccfcfc909cb?q=80&w=1470&auto=format&fit=crop",
-              "https://images.unsplash.com/photo-1610228764527-99663204639c?q=80&w=774&auto=format&fit=crop",
-              "https://images.unsplash.com/photo-1617339887307-e25ac323d31e?q=80&w=774&auto=format&fit=crop",
-              "https://images.unsplash.com/photo-1610481960407-552ef0561ec3?q=80&w=774&auto=format&fit=crop",
-              "https://images.unsplash.com/photo-1611601303377-c7f8bf04432d?q=80&w=774&auto=format&fit=crop",
-              "https://images.unsplash.com/photo-1547153760-18fc86324498?q=80&w=774&auto=format&fit=crop",
-              "https://images.unsplash.com/photo-1606103836293-0a063ebc6ee8?q=80&w=774&auto=format&fit=crop"
+              "https://images.unsplash.com/photo-1545959570-a94b34b57e67?q=80&w=1776&auto=format&fit=crop", // Classical dance performance
+              "https://images.unsplash.com/photo-1546427660-eb346c344ba5?q=80&w=1770&auto=format&fit=crop", // Stage performance with lights
+              "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=1769&auto=format&fit=crop", // Dancer in motion
+              "https://images.unsplash.com/photo-1568305088527-1a328a4dd4b6?q=80&w=1770&auto=format&fit=crop", // Dance recital
+              "https://images.unsplash.com/photo-1536526213067-c803fc5fbe10?q=80&w=1770&auto=format&fit=crop", // Dramatic stage lighting
+              "https://images.unsplash.com/photo-1611967164521-abce6e92ab97?q=80&w=1770&auto=format&fit=crop", // Dancer posing
+              "https://images.unsplash.com/photo-1623513442875-777fd192ccce?q=80&w=1770&auto=format&fit=crop", // Expressive dance
+              "https://images.unsplash.com/photo-1578774296842-c45e472b3028?q=80&w=1770&auto=format&fit=crop"  // Dance performance
             ].map((image, index) => (
               <motion.div
                 key={index}
