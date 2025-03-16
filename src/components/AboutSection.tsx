@@ -23,8 +23,26 @@ export const AboutSection: React.FC = () => {
     show: { opacity: 1, y: 0 }
   };
 
+  const danceStyles = [
+    {
+      name: "Thumri",
+      description: "Graceful expressions and delicate emotions",
+      image: "https://images.unsplash.com/photo-1608639013993-824afb267d0f?q=80&w=774&auto=format&fit=crop"
+    },
+    {
+      name: "Tarana",
+      description: "Pure rhythmic dance with intricate footwork",
+      image: "https://images.unsplash.com/photo-1533072561510-5044f4016b1d?q=80&w=1170&auto=format&fit=crop"
+    },
+    {
+      name: "Abhinaya",
+      description: "Storytelling through facial expressions and gestures",
+      image: "https://images.unsplash.com/photo-1617339860293-decbf705b3fb?q=80&w=774&auto=format&fit=crop"
+    }
+  ];
+
   return (
-    <section id="about" className="py-24 bg-secondary">
+    <section id="about" className="py-24 bg-gradient-to-b from-secondary to-secondary/50">
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
@@ -38,7 +56,7 @@ export const AboutSection: React.FC = () => {
               Our Academy
             </h2>
             <h3 className="text-3xl md:text-4xl font-serif font-bold">
-              Preserving the Legacy of Kathak
+              Preserving the Legacy of <span className="text-khatak-gold">Kathak</span>
             </h3>
           </motion.div>
 
@@ -64,7 +82,7 @@ export const AboutSection: React.FC = () => {
             >
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80" 
+                  src="https://images.unsplash.com/photo-1535359056830-d4badde79747?q=80&w=1374&auto=format&fit=crop" 
                   alt="Kathak dancers performing" 
                   className="w-full h-[500px] object-cover object-center"
                 />
@@ -85,7 +103,35 @@ export const AboutSection: React.FC = () => {
             </motion.div>
           </div>
           
-          <motion.div variants={item} className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <motion.div variants={item} className="mt-16 mb-12">
+            <h3 className="text-2xl md:text-3xl font-serif font-medium text-center mb-8">
+              Explore <span className="text-khatak-gold">Kathak</span> Dance Styles
+            </h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {danceStyles.map((style, index) => (
+                <motion.div 
+                  key={index}
+                  whileHover={{ y: -10 }}
+                  className="bg-white/5 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg border border-khatak-gold/10 hover:border-khatak-gold/30 transition-all duration-300"
+                >
+                  <div className="h-56 overflow-hidden">
+                    <img 
+                      src={style.image} 
+                      alt={style.name} 
+                      className="w-full h-full object-cover object-center transform hover:scale-110 transition-transform duration-700"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h4 className="text-xl font-serif font-medium mb-2 text-khatak-gold">{style.name}</h4>
+                    <p className="text-muted-foreground">{style.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+          
+          <motion.div variants={item} className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 title: "Authentic Training",
@@ -100,9 +146,9 @@ export const AboutSection: React.FC = () => {
                 description: "Students regularly participate in cultural events, festivals, and annual showcases to gain valuable stage experience."
               }
             ].map((feature, index) => (
-              <div key={index} className="bg-white/50 backdrop-blur-sm rounded-lg p-6 shadow-sm hover-lift">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 shadow-sm hover-lift border border-white/5">
                 <h4 className="text-xl font-serif font-medium mb-4 text-khatak-gold">{feature.title}</h4>
-                <p>{feature.description}</p>
+                <p className="text-muted-foreground">{feature.description}</p>
               </div>
             ))}
           </motion.div>

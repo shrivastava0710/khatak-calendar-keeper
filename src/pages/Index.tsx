@@ -16,25 +16,25 @@ const instructors = [
     name: 'Guru Rajendra Prasad',
     title: 'Founder & Master Instructor',
     bio: 'With over 40 years of experience in Kathak, Guru Rajendra Prasad has performed worldwide and received numerous awards for his contributions to classical dance.',
-    image: 'https://images.unsplash.com/photo-1566753323558-f4e0952af115?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'
+    image: 'https://images.unsplash.com/photo-1627087820883-7a102b79179a?q=80&w=774&auto=format&fit=crop'
   },
   {
     name: 'Neha Sharma',
     title: 'Senior Instructor',
     bio: 'A disciple of Guru Rajendra Prasad for 15 years, Neha specializes in the Lucknow gharana style of Kathak and has performed at major festivals across India.',
-    image: 'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'
+    image: 'https://images.unsplash.com/photo-1619709821176-0a0ae4664108?q=80&w=774&auto=format&fit=crop'
   },
   {
     name: 'Sunita Kalra',
     title: 'Advanced Choreographer',
     bio: 'Sunita blends traditional Kathak with contemporary influences, creating innovative choreographies while maintaining the classical essence of the dance form.',
-    image: 'https://images.unsplash.com/photo-1551972873-b7e8754e8e26?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'
+    image: 'https://images.unsplash.com/photo-1616622286548-c9e9f8dcc8b2?q=80&w=774&auto=format&fit=crop'
   },
   {
     name: 'Priya Mehta',
     title: 'Youth Program Director',
     bio: 'With a special talent for working with children and teens, Priya has developed a unique curriculum that makes Kathak accessible and engaging for young students.',
-    image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'
+    image: 'https://images.unsplash.com/photo-1624610256975-6c0c9fe35f99?q=80&w=774&auto=format&fit=crop'
   }
 ];
 
@@ -48,7 +48,7 @@ const Index: React.FC = () => {
       <AboutSection />
       
       {/* Instructors Section */}
-      <section id="instructors" className="py-24">
+      <section id="instructors" className="py-24 bg-gradient-to-b from-background to-secondary/30">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -84,8 +84,67 @@ const Index: React.FC = () => {
         </div>
       </section>
       
+      {/* Gallery Section - New Addition */}
+      <section className="py-24 bg-khatak-charcoal">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-sm font-medium tracking-wider uppercase mb-3 text-khatak-gold">
+              Our Performances
+            </h2>
+            <h3 className="text-3xl md:text-4xl font-serif font-bold text-white">
+              Kathak in Motion
+            </h3>
+            <p className="mt-4 text-lg text-white/70 max-w-2xl mx-auto">
+              Glimpses of our performances showcasing the grace, precision and beauty of Kathak dance.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            {[
+              "https://images.unsplash.com/photo-1504326787394-e6d75cae8027?q=80&w=1470&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1504894577061-4ccfcfc909cb?q=80&w=1470&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1610228764527-99663204639c?q=80&w=774&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1617339887307-e25ac323d31e?q=80&w=774&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1610481960407-552ef0561ec3?q=80&w=774&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1611601303377-c7f8bf04432d?q=80&w=774&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1547153760-18fc86324498?q=80&w=774&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1606103836293-0a063ebc6ee8?q=80&w=774&auto=format&fit=crop"
+            ].map((image, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ 
+                  duration: 0.5,
+                  delay: index * 0.1,
+                  ease: "easeOut"
+                }}
+                whileHover={{ scale: 1.05, zIndex: 10 }}
+                className={cn(
+                  "overflow-hidden rounded-lg shadow-xl",
+                  index % 3 === 0 ? "md:col-span-2 md:row-span-2" : ""
+                )}
+              >
+                <img 
+                  src={image} 
+                  alt={`Kathak dance performance ${index + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
       {/* Calendar Preview Section */}
-      <section className="py-24 bg-secondary">
+      <section className="py-24 bg-gradient-to-b from-secondary/80 to-background">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -123,6 +182,7 @@ const Index: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5 }}
+              className="bg-white/5 backdrop-blur-sm p-4 rounded-lg border border-white/10 shadow-xl"
             >
               <Calendar schedules={schedules} compact={true} />
             </motion.div>

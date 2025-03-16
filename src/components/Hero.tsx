@@ -38,10 +38,10 @@ export const Hero: React.FC = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed z-0"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1535368459444-9dfd61892232?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')",
+          backgroundImage: "url('https://images.unsplash.com/photo-1608031236233-a4583bd3b02e?q=80&w=1974&auto=format&fit=crop')",
         }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent" />
       </div>
       
       {/* Hero Content */}
@@ -54,7 +54,7 @@ export const Hero: React.FC = () => {
         >
           <motion.div variants={item}>
             <h2 className="text-sm md:text-base font-medium tracking-wider uppercase mb-3 text-khatak-gold">
-              <span className="inline-block px-3 py-1 bg-black bg-opacity-30 backdrop-blur-sm rounded-full">
+              <span className="inline-block px-3 py-1 bg-khatak-charcoal/60 backdrop-blur-sm rounded-full border border-khatak-gold/30">
                 Tradition • Expression • Rhythm
               </span>
             </h2>

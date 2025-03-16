@@ -28,9 +28,12 @@ export const InstructorCard: React.FC<InstructorCardProps> = ({
         delay: delay * 0.2,
         ease: [0.4, 0.0, 0.2, 1] 
       }}
+      whileHover={{ y: -10 }}
       className={cn(
-        "bg-background rounded-lg overflow-hidden shadow-md hover:shadow-xl",
-        "transition-all duration-300 group hover:-translate-y-1"
+        "rounded-lg overflow-hidden shadow-xl",
+        "transition-all duration-300 group hover:shadow-khatak-gold/20",
+        "bg-gradient-to-b from-background to-secondary/30 backdrop-blur-sm",
+        "border border-white/10"
       )}
     >
       <div className="relative h-80 overflow-hidden">
@@ -39,13 +42,13 @@ export const InstructorCard: React.FC<InstructorCardProps> = ({
           alt={name} 
           className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" 
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-80"></div>
         <div className="absolute bottom-0 left-0 w-full p-6 text-white">
           <h3 className="text-2xl font-serif font-medium">{name}</h3>
           <p className="text-khatak-gold font-medium">{title}</p>
         </div>
       </div>
-      <div className="p-6">
+      <div className="p-6 bg-white/5 backdrop-blur-sm">
         <p className="text-muted-foreground">{bio}</p>
       </div>
     </motion.div>
