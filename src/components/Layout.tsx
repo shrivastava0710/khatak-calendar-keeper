@@ -46,7 +46,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-xl font-serif font-medium mb-4">Khatak Dance Academy</h3>
+              <h3 className="text-xl font-serif font-medium mb-4">Noopar Dance Academy</h3>
               <p className="text-muted-foreground">Preserving and promoting the classical dance tradition of Kathak since 1998.</p>
             </div>
             <div>
@@ -54,7 +54,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
               <address className="not-italic text-muted-foreground">
                 <p>123 Dance Street</p>
                 <p>New Delhi, India</p>
-                <p className="mt-2">info@khatakacademy.com</p>
+                <p className="mt-2">info@nooparacademy.com</p>
                 <p>+91 98765 43210</p>
               </address>
             </div>
@@ -68,7 +68,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
             </div>
           </div>
           <div className="mt-8 pt-6 border-t border-border text-center text-muted-foreground text-sm">
-            <p>© {new Date().getFullYear()} Khatak Dance Academy. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Noopar Dance Academy. All rights reserved.</p>
           </div>
         </div>
       </footer>

@@ -63,7 +63,7 @@ export const AboutSection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <motion.div variants={item} className="order-2 md:order-1">
               <p className="text-lg mb-6 leading-relaxed">
-                Founded in 1998 by Guru Rajendra Prasad, the Khatak Dance Academy has been dedicated to 
+                Founded in 1998 by Guru Rajendra Prasad, the Noopar Dance Academy has been dedicated to 
                 preserving and promoting the ancient art form of Kathak dance for over two decades.
               </p>
               <p className="text-lg mb-6 leading-relaxed">

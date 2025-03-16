@@ -48,8 +48,8 @@ export const Navbar: React.FC = () => {
         <nav className="flex items-center justify-between h-20">
           <NavLink to="/" className="relative z-10">
             <h1 className="text-2xl font-serif font-bold">
-              <span>Khatak</span>
-              <span className="text-khatak-gold"> Academy</span>
+              <span>Noopar</span>
+              <span className="text-khatak-gold"> Dance Academy</span>
             </h1>
           </NavLink>
 

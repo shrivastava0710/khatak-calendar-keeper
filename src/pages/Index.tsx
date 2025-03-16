@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import Hero from '@/components/Hero';
@@ -233,7 +232,7 @@ const Index: React.FC = () => {
                   <h4 className="text-xl font-serif font-medium mb-3">Contact Information</h4>
                   <p className="text-muted-foreground">
                     Phone: +91 98765 43210<br />
-                    Email: info@khatakacademy.com
+                    Email: info@nooparacademy.com
                   </p>
                 </div>
                 
